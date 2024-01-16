@@ -1,0 +1,17 @@
+.container{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    margin: 4px 0px;
+    border-radius: 12px;
+}
+
+.container:hover{
+    background-color: #2e347a;
+}
+
+.container.active{
+    background-color: #2e347a;
+}

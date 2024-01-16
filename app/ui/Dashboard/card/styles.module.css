@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+  background-color: var(--bgSoft);
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  gap: 10px;
+  width: 100%;
+  transition: background-color 0.2 s ease;
+}
+
+.container:hover{
+    background-color: #2e347a;
+}
+
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 12px;
+}
