@@ -1,0 +1,15 @@
+.container {
+}
+
+.sectionName {
+  padding: 8px 4px 8px 4px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.sectionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

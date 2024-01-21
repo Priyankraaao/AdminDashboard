@@ -85,21 +85,22 @@ const Sidebar = async () => {
           className={styles.userImage}
           src={"/noavatar.png"}
           alt=""
-          width="50"
-          height="50"
+          width="24"
+          height="24"
         />
         <div className={styles.userDetail}>
-          <span className={styles.username}>Priyank</span>
-          <span className={styles.userTitle}>Administrator</span>
+          <span className={styles.username}>WyeBind</span>
         </div>
       </div>
       <ul className={styles.list}>
         {menuItems.map((cat) => (
           <li key={cat.title}>
             <span className={styles.cat}>{cat.title}</span>
+            <div className={styles.childbar}>
             {cat.list.map((item) => (
               <SubSideBar item={item} key={item.title} />
             ))}
+            </div>
           </li>
         ))}
       </ul>

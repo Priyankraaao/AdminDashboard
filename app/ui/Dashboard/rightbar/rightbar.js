@@ -1,48 +1,108 @@
-import Image from "next/image";
+import Section from "./Section/section";
 import styles from "./styles.module.css";
-import { MdPlayCircleFilled, MdReadMore } from "react-icons/md";
+
+const sections = [
+  {
+    sectionName: "Notification",
+    sectionDetails: [
+      {
+        title: "You fixed a bug.",
+        description: "Just now",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "New user registered.",
+        description: "59 minutes ago",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "You fixed a bug.",
+        description: "12 hours ago",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Andi Lane subscribed to you.",
+        description: "Today, 11:59 AM",
+        icon: "",
+        hiddenDescription: "",
+      },
+    ],
+  },
+  {
+    sectionName: "Activities",
+    sectionDetails: [
+      {
+        title: "Changed the style.",
+        description: "Just now",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Released a new version.",
+        description: "59 minutes ago",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Submitted a bug.",
+        description: "12 hours ago",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Modified A data in Page X.",
+        description: "Today, 11:59 AM.",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Deleted a page in Project X.",
+        description: "Feb 2, 2024.",
+        icon: "",
+        hiddenDescription: "",
+      },
+    ],
+  },
+  {
+    sectionName: "Contacts",
+    sectionDetails: [
+      {
+        title: "Natali Craig.",
+        description: "",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Drew Cano.",
+        description: "",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Kate Morrison.",
+        description: "",
+        icon: "",
+        hiddenDescription: "",
+      },
+      {
+        title: "Melody Macy.",
+        description: "",
+        icon: "",
+        hiddenDescription: "",
+      },
+    ],
+  },
+];
 
 const Rightbar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.item}>
-        <div className={styles.bgContainer}>
-          <Image className={styles.bg} src="/astronaut.png" alt="" fill />
-        </div>
-        <div className={styles.text}>
-          <span className={styles.notification}>🔥 Available Now</span>
-          <h3 className={styles.title}>
-            How to use the new version of the admin dashboard?
-          </h3>
-          <span className={styles.subtitle}>Takes 4 minutes to learn</span>
-          <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit eius libero perspiciatis recusandae possimus.
-          </p>
-          <button className={styles.button}>
-            <MdPlayCircleFilled />
-            Watch
-          </button>
-        </div>
-      </div>
-      <div className={styles.item}>
-        <div className={styles.text}>
-          <span className={styles.notification}>🚀 Coming Soon</span>
-          <h3 className={styles.title}>
-            New server actions are available, partial pre-rendering is coming
-            up!
-          </h3>
-          <span className={styles.subtitle}>Boost your productivity</span>
-          <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Reprehenderit eius libero perspiciatis recusandae possimus.
-          </p>
-          <button className={styles.button}>
-            <MdReadMore />
-            Learn
-          </button>
-        </div>
-      </div>
+      {sections.map((section) => {
+        return <Section items={section}/>;
+      })}
     </div>
   );
 };

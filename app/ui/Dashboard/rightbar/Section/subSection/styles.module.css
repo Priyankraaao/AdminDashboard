@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap:12px;
+  padding:8px;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+}
+
+.container:hover{
+    background-color: var(--black-5, rgba(28, 28, 28, 0.05));
+
+    .description{
+        font-size: 13px;
+        color: var(--text);
+    }
+
+    .texts{
+        padding-left: 4px;
+    }
+
+}
+
+.title {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.userImage{
+    border: 1px solid var(--textSoft);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.texts{
+    transition: padding-left 0.3s ease;
+}
+
+.description{
+    color: var(--textSoft);
+    font-size: 12px;
+    transition: font-size 0.3s ease , color 0.3s ease ;
+}

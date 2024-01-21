@@ -13,7 +13,11 @@ const Navbar = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{pathName.split("/").pop()}</div>
+      <div className={styles.titleDiv}>
+        <span className={styles.title}>{pathName.split("/").pop()}</span>
+        <span className={styles.titleSlash}> /</span>
+        <span> Default</span>
+      </div>
       <div className={styles.menu}>
         <div className={styles.search}>
           <MdSearch />

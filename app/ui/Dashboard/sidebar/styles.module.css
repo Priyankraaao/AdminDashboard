@@ -1,46 +1,50 @@
-.container{
-  position: sticky;
-  top: 40px;
+.container {
+  /* position: sticky;
+  top: 40px; */
 }
 
-.user{
+.user {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 6px;
+  margin-bottom: 12px;
+  padding: 8px;
 }
 
-.userImage{
+.userImage {
   border-radius: 50%;
   object-fit: cover;
 }
 
-.userDetail{
+.userDetail {
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
 }
 
-.username{
-  font-weight: 500;
+.username {
+  color: var(--black-100, #1c1c1c);
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.userTitle{
+.userTitle {
   font-size: 12px;
   color: var(--textSoft);
 }
 
-.list{
+.list {
   list-style: none;
 }
 
-.cat{
+.cat {
   color: var(--textSoft);
   font-weight: bold;
   font-size: 13px;
   margin: 10px 0px;
 }
 
-.logout{
+.logout {
   padding: 20px;
   margin: 5px 0px;
   display: flex;
@@ -54,6 +58,10 @@
   width: 100%;
 }
 
-.logout:hover{
+.logout:hover {
   background-color: #2e374a;
+}
+
+.childbar {
+  margin-bottom: 20px;
 }

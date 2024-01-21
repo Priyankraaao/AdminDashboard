@@ -13,7 +13,11 @@ const SubSideBar = ({ item = {} }) => {
       }`}
     >
       {item.icon}
+      <div  className={`${styles.title} ${
+        pathName === item.path && styles.active
+      }`}>
       {item.title}
+      </div>
     </Link>
   );
 };

@@ -4,12 +4,17 @@
  }
  
  .menu{
-     flex:1;
+     flex: 0 0 15%;
      background-color: var(--bgSoft);
-     padding: 20px;
+     padding: 16px;
+     border-right: 1px solid var(--black-10, rgba(28, 28, 28, 0.10));
  }
  
  .content{
-     flex: 4;
-     padding: 20px;
+    flex: 0 0 65%
+ }
+
+ .right{
+    flex: 0 0 20%;
+    border-left: 1px solid var(--black-10, rgba(28, 28, 28, 0.10));
  }

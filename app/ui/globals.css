@@ -1,8 +1,8 @@
 :root{
-    --bg:#494c40;
-    --bgSoft:#182237;
-    --text:white;
-    --textSoft:#b7bac1;
+    --bg:white;
+    --bgSoft:white;
+    --text:#1C1C1C;
+    --textSoft:var(--black-40, rgba(28, 28, 28, 0.40));;
 }
 
 *{
