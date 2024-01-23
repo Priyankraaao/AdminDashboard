@@ -212,7 +212,7 @@ const intersectionPointsPlugin = {
 
 ChartJS.register(intersectionPointsPlugin);
 
-const NavChart = ({ data = [] }) => {
+const TotalUsers = ({ data = [] }) => {
   const [displayType, setDisplaytype] = useState("Months");
   const [selectedYear, setSelectedYear] = useState(2022);
 
@@ -284,41 +284,39 @@ const NavChart = ({ data = [] }) => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.text}>
-          Total Users 
-        </div>
-        <div style={{display:"flex"}}>
-        <div >
-          <label className={styles.labelText} htmlFor="yearSelect">
-            Select current year:{" "}
-          </label>
-          <select
-            className={styles.select}
-            id="yearSelect"
-            value={selectedYear}
-            onChange={handleYearChange}
+        <div className={styles.text}>Total Users</div>
+        <div style={{ display: "flex", gap: 12 }}>
+          <div>
+            <label className={styles.labelText} htmlFor="yearSelect">
+              Select current year:{" "}
+            </label>
+            <select
+              className={styles.select}
+              id="yearSelect"
+              value={selectedYear}
+              onChange={handleYearChange}
+            >
+              {years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <button
+            className={styles.button}
+            onClick={() => {
+              if (displayType === "Months") {
+                setDisplaytype("Days");
+              }
+              if (displayType === "Days") {
+                setDisplaytype("Months");
+              }
+            }}
           >
-            {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
-        </div>
-        
-        <button
-          className={styles.button}
-          onClick={() => {
-            if (displayType === "Months") {
-              setDisplaytype("Days");
-            }
-            if (displayType === "Days") {
-              setDisplaytype("Months");
-            }
-          }}
-        >
-          {displayType}
-        </button>
+            {displayType}
+          </button>
         </div>
       </div>
       <Line data={chartData} options={options} />
@@ -326,4 +324,4 @@ const NavChart = ({ data = [] }) => {
   );
 };
 
-export default NavChart;
+export default TotalUsers;

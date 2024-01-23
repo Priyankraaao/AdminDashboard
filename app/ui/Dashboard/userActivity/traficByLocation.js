@@ -4,7 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DonutChart = () => {
+const TraficByLocation = () => {
   const data = {
     labels: ["USA", "Mexico", "Canada", "Other"],
     datasets: [
@@ -63,13 +63,6 @@ const DonutChart = () => {
           display: true,
           text: "Traffic by Location",
         },
-
-        onHover: function (event, legendItem) {
-          document.getElementById("chart").style.cursor = "pointer";
-        },
-        onLeave: function (event, legendItem) {
-          document.getElementById("chart").style.cursor = "default";
-        },
       },
     },
   };
@@ -84,4 +77,4 @@ const DonutChart = () => {
   );
 };
 
-export default DonutChart;
+export default TraficByLocation;

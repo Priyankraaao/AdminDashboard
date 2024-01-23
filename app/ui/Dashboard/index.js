@@ -1,15 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
 import Card from "./card/card";
 import styles from "./styles.module.css";
 import Transactions from "./transactions/transactions";
-import { Line } from "react-chartjs-2";
-import NavChart from "./userActivity/chart";
-import LineChart from "./userActivity/chart";
-import MutualFundChart from "./userActivity/chart";
-import DonutChart from "./userActivity/donut";
-import BarComponent from "./userActivity/bar";
-import TotalUser from "./Totaluser/totaluser";
 import UserActivity from "./userActivity/userActivity";
 
 const cardDetails = [
@@ -52,18 +44,19 @@ const cardDetails = [
 
 const Dashboard = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.main}>
-        <div className={styles.cards}>
-          {cardDetails.map((card) => {
-            return <Card key={card.title} {...card} />;
-          })}
-        </div>
-
-        <UserActivity />
-
-        <Transactions />
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <span className={styles.texts}>Overview</span>
+        <span className={styles.text}>Today</span>
       </div>
+      <div className={styles.cards}>
+        {cardDetails.map((card) => {
+          return <Card key={card.title} {...card} />;
+        })}
+      </div>
+
+      <UserActivity />
+      <Transactions />
     </div>
   );
 };

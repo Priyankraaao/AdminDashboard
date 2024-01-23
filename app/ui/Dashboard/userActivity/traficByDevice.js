@@ -11,7 +11,7 @@ ChartJS.register(
   Legend
 );
 
-function BarComponent() {
+function TraficByDevice() {
   const labels = ["Linux", "Max", "IOS", "Windows", "Android", "Other"];
 
   const data = {
@@ -67,4 +67,4 @@ function BarComponent() {
   return <Bar  options={options} data={data} />;
 }
 
-export default BarComponent;
+export default TraficByDevice;

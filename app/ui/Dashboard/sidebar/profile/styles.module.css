@@ -1,0 +1,30 @@
+.user {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 12px;
+    padding: 8px;
+  }
+  
+  .userImage {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .userDetail {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .username {
+    color: var(--black-100, #1c1c1c);
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: capitalize;
+  }
+  
+  .userTitle {
+    font-size: 12px;
+    color: var(--textSoft);
+  }

@@ -1,5 +1,6 @@
 .container{
     padding: 16px;
+    max-height: 330px;
 }
 
 .button {
@@ -46,6 +47,7 @@
   display: flex;
   flex-direction: column;
   gap: 28px;
+  max-width: 662px;
 }
 
 .totalUser {
@@ -60,8 +62,6 @@
   padding: 16px;
   background: #f7f9fb;
   border-radius: 16px;
-  display: flex;
-  align-items: center;
 }
 
 .trafficDevice {
@@ -86,4 +86,64 @@
     color: #1C1C1C;
     font-weight: 600;
     line-height: 20px;
+}
+
+.container1{
+    padding: 24px;
+}
+
+.traficContainer{
+    margin-top: 16px;
+    padding: 8px 8px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    justify-content: space-between;
+}
+
+.divStylesParent{
+    display: flex;
+    gap:12px;
+    align-items: center;
+    transition: padding-left 0.3s ease;
+}
+
+.divStylesParent:hover{
+    padding-left: 6px;
+}
+
+.divStyle1{
+    border-radius: var(--80, 80px);
+    background-color: #1C1C1C;
+    height: 4px;
+    width: 20px;
+}
+
+.divStyle2{
+    border-radius: var(--80, 80px);
+    background: var(--black-40, rgba(28, 28, 28, 0.40));
+    height: 4px;
+    width: 20px;
+}
+
+.divStyle3{
+    border-radius: var(--80, 80px);
+    background: var(--black-10, rgba(28, 28, 28, 0.10));
+    height: 4px;
+    width: 20px;
+}
+
+.divStyles{
+    display: flex;
+    gap: 2px;
+}
+
+.progressBar{
+    display: flex;
+    flex-direction: column;
+    gap:40px
+}
+
+.text2{
+    font-size: 12px;
 }

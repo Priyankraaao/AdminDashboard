@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./styles.module.css";
 import {
   MdDashboard,
@@ -10,9 +9,10 @@ import {
   MdPeople,
   MdOutlineSettings,
   MdHelpCenter,
-  MdLogout,
 } from "react-icons/md";
 import SubSideBar from "./subsidebar/subsidebar";
+import Profile from "./profile/profile";
+import Logout from "./logout/logout";
 
 const menuItems = [
   {
@@ -80,35 +80,20 @@ const menuItems = [
 const Sidebar = async () => {
   return (
     <div className={styles.container}>
-      <div className={styles.user}>
-        <Image
-          className={styles.userImage}
-          src={"/noavatar.png"}
-          alt=""
-          width="24"
-          height="24"
-        />
-        <div className={styles.userDetail}>
-          <span className={styles.username}>WyeBind</span>
-        </div>
-      </div>
+      <Profile />
       <ul className={styles.list}>
         {menuItems.map((cat) => (
           <li key={cat.title}>
             <span className={styles.cat}>{cat.title}</span>
             <div className={styles.childbar}>
-            {cat.list.map((item) => (
-              <SubSideBar item={item} key={item.title} />
-            ))}
+              {cat.list.map((item) => (
+                <SubSideBar item={item} key={item.title} />
+              ))}
             </div>
           </li>
         ))}
       </ul>
-    
-        <button className={styles.logout}>
-          <MdLogout />
-          Logout
-        </button>
+      <Logout/>
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import BarComponent from "./bar";
-import DonutChart from "./donut";
-import NavChart from "./chart";
 import styles from "./styles.module.css";
+import TraficByWebsite from "./website";
+import TotalUsers from "./totalUser";
+import TraficByLocation from "./traficByLocation";
+import TraficByDevice from "./traficByDevice";
 
 const UserActivity = () => {
   const [mutualFundData, setMutualFundData] = useState([]);
@@ -17,27 +18,31 @@ const UserActivity = () => {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchMutualFundData();
   }, []);
-  
+
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
-      <div style={{ display: "flex", gap: 20 }}>
+      <div style={{ display: "flex", gap: 20  }}>
         <div className={styles.totalUser}>
-          <NavChart data={mutualFundData.data} />
+          <TotalUsers data={mutualFundData.data} />
         </div>
-        <div className={styles.trafficWebsite}>traffic by website</div>
+        <div className={styles.trafficWebsite}>
+            <TraficByWebsite/>
+        </div>
       </div>
+
+
+
       <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
         <div style={{ flex: 2 }}>
           <div className={styles.trafficDevice}>
-            <BarComponent />
+            <TraficByDevice />
           </div>
         </div>
         <div style={{ flex: 2 }}>
           <div className={styles.traficCountry}>
-            <DonutChart />
+            <TraficByLocation />
           </div>
         </div>
       </div>

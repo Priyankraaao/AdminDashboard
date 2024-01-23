@@ -7,7 +7,7 @@ const Section = ({ items }) => {
       <div className={styles.sectionName}>{items.sectionName}</div>
       <div className={styles.sectionDetails}>
         {items.sectionDetails.map((sub)=>{
-            return <SubSection items={sub}/>
+            return <SubSection key={sub.title} items={sub}/>
         })}
       </div>
     </div>

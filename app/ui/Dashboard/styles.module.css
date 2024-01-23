@@ -1,22 +1,27 @@
-
-
-.wrapper {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-}
-
 .main {
-  flex: 3;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 12px 20px 20px 20px;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.texts{
+  font-weight: 600;
+}
+
+.text{
+  font-size: 12px;
 }
 
 .cards {
   display: flex;
-  gap: 20px;
   justify-content: space-between;
+  gap:20px
 }
 
 .side {

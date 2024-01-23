@@ -2,11 +2,9 @@
 import { usePathname } from "next/navigation";
 import styles from "./styles.module.css";
 import {
-  MdNotifications,
-  MdOutlineChat,
-  MdPublic,
   MdSearch,
 } from "react-icons/md";
+import Image from "next/image";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -14,6 +12,22 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.titleDiv}>
+        <Image
+          className={styles.userImage}
+          src={"/sidebar.svg"}
+          alt=""
+          width="24"
+          height="24"
+        />
+
+        <Image
+          className={styles.userImage}
+          src={"/star.svg"}
+          alt=""
+          width="24"
+          height="24"
+        />
+
         <span className={styles.title}>{pathName.split("/").pop()}</span>
         <span className={styles.titleSlash}> /</span>
         <span> Default</span>
@@ -28,9 +42,37 @@ const Navbar = () => {
           />
         </div>
         <div className={styles.icons}>
-          <MdNotifications size={20} />
-          <MdOutlineChat size={20} />
-          <MdPublic size={20} />
+          <Image
+            className={styles.userImage}
+            src={"/sun.svg"}
+            alt=""
+            width="24"
+            height="24"
+          />
+
+          <Image
+            className={styles.userImage}
+            src={"/ClockCounterClockwise.svg"}
+            alt=""
+            width="24"
+            height="24"
+          />
+          
+          <Image
+            className={styles.userImage}
+            src={"/Bell.svg"}
+            alt=""
+            width="24"
+            height="24"
+          />
+
+          <Image
+            className={styles.userImage}
+            src={"/sidebar.svg"}
+            alt=""
+            width="24"
+            height="24"
+          />
         </div>
       </div>
     </div>

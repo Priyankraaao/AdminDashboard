@@ -1,0 +1,21 @@
+.submitButton1{
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    border: 1px solid #333;
+  }
+  
+  .google{
+    border-radius: 6px;
+  
+  }
