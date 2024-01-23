@@ -4,6 +4,7 @@ This is a web application built with Next.js, designed to provide a seamless adm
 
 
 Features
+
 Next.js: A React framework for building server-rendered React applications.
 
 NextAuth: Authentication library for Next.js applications.
@@ -22,21 +23,28 @@ jsonwebtoken: JSON Web Token implementation for Node.js.
 
 
 Prerequisites
+
 Before you begin, ensure you have Node.js and npm installed.
 
 Installation
 Clone the repository: git clone https://github.com/your-username/nextadmin.git
+
 Navigate to the project directory: cd nextadmin
+
 Install dependencies: npm install
 
 Configuration
+
 Create a .env file based on the provided .env.example.
+
 Configure your environment variables as needed.
 
 Development
+
 To run the development server: npm run dev
 
 Building
+
 To build the project: npm run build
 
 Start
